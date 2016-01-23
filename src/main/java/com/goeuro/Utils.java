@@ -64,8 +64,8 @@ public class Utils {
     }
 
 
-    public static void writeCSV(List<Location> locations){
-        final String fileName = "locations.csv";
+    public static void writeCSV(final String cityName, List<Location> locations){
+        final String fileName = cityName + "_locations.csv";
         BufferedWriter buf = null;
         try {
             File csvFile = new File(fileName);

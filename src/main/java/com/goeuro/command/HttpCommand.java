@@ -19,6 +19,6 @@ public class HttpCommand implements Command {
 
     public void execute(final String cityName) {
         List<Location> locations = locationServiceClient.getLocations(cityName);
-        Utils.writeCSV(locations);
+        Utils.writeCSV(cityName, locations);
     }
 }

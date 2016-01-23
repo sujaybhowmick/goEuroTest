@@ -10,15 +10,17 @@ public class Driver {
 
     public static void main(String args[]){
         Command cmd = new HttpCommand();
-        System.out.println("Writing CSV file...");
-        final String cityName;
+
+        String cityName = null;
         if(args != null && args.length == 1){
-            cityName = args[1];
+            cityName = args[0];
+            System.out.println(String.format("Writing CSV file for city %s...", cityName));
+            cmd.execute(cityName);
         }else {
             printHelp();
         }
-        cmd.execute("Berlin");
-        System.out.println("Finished writing csv file 'locations.csv'");
+
+        System.out.println(String.format("Finished writing csv file %s.", cityName + "_locations.csv"));
     }
 
     private static void printHelp(){

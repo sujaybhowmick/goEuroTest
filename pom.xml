@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
+                            <addClasspath>false</addClasspath>
                             <mainClass>com.goeuro.Driver</mainClass>
                         </manifest>
                     </archive>
