@@ -34,12 +34,10 @@ public class LocationServiceClientImpl implements LocationServiceClient {
 
         Response response = httpClient.sendRequest(request);
         int statusCode = response.getStatusCode();
-        String body = null;
         if(statusCode == OK){
-            body = response.getBody();
+            return response.getBody();
         }else {
             throw new ServiceException(statusCode);
         }
-        return body;
     }
 }
